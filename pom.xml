@@ -20,6 +20,12 @@
   </properties>
 
   <dependencies>
+    <!--flyway-->
+    <dependency>
+      <groupId>org.flywaydb</groupId>
+      <artifactId>flyway-core</artifactId>
+      <version>4.1.0</version>
+    </dependency>
     <!-- Mybatis3.4.1 -->
     <dependency>
       <groupId>org.mybatis</groupId>

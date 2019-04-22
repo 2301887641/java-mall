@@ -7,8 +7,5 @@
        <context:component-scan base-package="com.seckill" use-default-filters="false">
               <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
        </context:component-scan>
-       <!--读取jdbc.properties文件       -->
-       <bean id="propertyResourceConfigurer" class="org.springframework.beans.factory.config.PropertyResourceConfigurer">
-              <property name=""
-       </bean>
+
 </beans>
