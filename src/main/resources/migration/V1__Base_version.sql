@@ -10,12 +10,8 @@ CREATE TABLE mall_merchant (
 	update_time timestamp  not null default '0000-00-00 00:00:00',
   name varchar(50) not null COMMENT '商家名称',
   store_name varchar(50) not null COMMENT '店铺名称',
-  password varchar(64) not null COMMENT '用户密码，MD5加密或sha256散列加密',
-  email varchar(50) not null default '' COMMENT '邮箱',
-  login_count int(10) not null default 0 COMMENT '登陆次数',
-  is_admin tinyint(1) not null default 0 COMMENT '是否管理员 0不是 1是',
-  last_login_ip varchar(30) not null default '' COMMENT 'ip地址',
-  PRIMARY KEY (id),
-  UNIQUE KEY user_name_unique (username) USING BTREE,
-  UNIQUE KEY nickname(nickname) using BTREE
+  account varchar(64) not null COMMENT '帐号',
+  password varchar(50) not null COMMENT '密码',
+  scope varchar(500) not null  COMMENT '登陆次数',
+  PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
